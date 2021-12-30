@@ -1,38 +1,129 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #2874f0;
+  gap: 10px;
+  max-height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-item{
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  min-width: 92%;
+  max-width:92%;
+}
+
+.search-input{
+  display: flex;  
+  flex-direction: row;
+  flex-grow: 0.5;
+}
+.input{
+  border: 0.5px solid whitesmoke; 
+  padding:2px;
+  min-width: 92%;
+  font-size: 20px;
+  min-height: 40px;
+
+  
+}
+.input:focus{
+  outline: none;
+}
+.input:active{
+  border: 1px solid wheat; 
+
+}
+
+
+.result{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  gap:10px;
+  align-content: flex-start;
+}
+
+
+.result:hover{
+  background: gray;
+}
+
+.flag{
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+}
+
+.results-holder{
+  margin-top: 5px;
+  margin-top: none;
+  background-color: whitesmoke;
+  min-height: 200px;
+  max-height: 150px;
+  overflow: auto;
+  max-width: 92%;
+  z-index: 2;
+  padding: 3px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.lds-dual-ring {
+  display: inline-block;
+  
 }
-
-@keyframes App-logo-spin {
-  from {
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+h5{
+  text-align: left;
 }
